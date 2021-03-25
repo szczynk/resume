@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "set DEPLOY_ENV=GH_PAGES && nuxt build --analyze",
+    "build": "nuxt build --analyze",
     "start": "nuxt start",
-    "generate": "set DEPLOY_ENV=GH_PAGES && nuxt generate",
+    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "snyk-protect": "snyk protect",
