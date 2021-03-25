@@ -1,0 +1,7 @@
+# Education Template
+# educations_title: Education #(Use this to override)
+educations:
+- name: Physics
+  place: State University of Jakarta
+  dates: 2016 - Now
+  qualification: Bachelor’s degrees

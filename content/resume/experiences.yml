@@ -1,0 +1,14 @@
+# Experience template
+# experiences_title: Work experience #(Use this to override)
+experiences:
+- company: Badan Meteorologi Klimatologi dan Geofisika (BMKG)
+  link: http://satelit.bmkg.go.id/
+  place: Central Jakarta
+  job_title: Student Intern | Weather & Volcanic Ash Analyst
+  dates: August 2019 - October 2019
+  description: | # this will include new lines to allow paragraphs
+    <ul>
+      <li>Weather Analyst with Himawari-8 Satellite Imagery</li>
+      <li>Volcanic Ash Analyst, especially at Mount Agung and Mount Sinabung Volcanic Dust Clouds with Himawari-8 Satellite Imagery</li>
+      <p>Skills: <mark>Python</mark> <mark>Remote Data</mark> <mark>Satellite Image Management</mark></p>
+    </ul>
