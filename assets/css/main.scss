@@ -303,6 +303,12 @@ ul.icons a {
   }
   margin: 0 auto;
   padding-top: 10px;
+
+  .gh-button-container {
+    a[href] {
+      color:  #000000;
+    }
+  }
 }
 
 .el-timeline-item__timestamp {
