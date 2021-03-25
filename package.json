@@ -11,7 +11,9 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "pushdir": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "deploy": "yarn run generate && yarn run pushdir"
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
