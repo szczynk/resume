@@ -1,8 +1,8 @@
 <template>
   <el-container class="resume-container">
-    <!-- Header -->
     <el-main id="main" class="resume-main-container">
-      <div class="resume-main-container-2">
+      <!-- Header -->
+      <div class="resume-main-container-2 resume-header">
         <el-row>
           <el-col :span="12">
             <div class="header-left">
@@ -80,12 +80,12 @@
       </div>
       <!-- Header -->
       <!-- About -->
-      <div v-if="about.about_content" class="resume-main-container-2">
+      <div v-if="about.about_content" class="resume-main-container-2 resume-about">
         <h3 id="about-title">
           {{ about.about_title ? about.about_title : "About Me" }}
         </h3>
         <el-row v-if="about.about_profile_image">
-          <el-col :span="6">
+          <el-col :span="6" :xs="8">
             <p>
               <el-avatar
                 id="about-profile-image"
@@ -96,7 +96,7 @@
               />
             </p>
           </el-col>
-          <el-col :span="18">
+          <el-col :span="18" :xs="16">
             <!-- eslint-disable-next-line -->
             <p id="about-content" v-html="about.about_content" />
           </el-col>
@@ -110,7 +110,7 @@
       </div>
       <!-- About -->
       <!-- Projects -->
-      <div v-if="projectsData.projects" class="resume-main-container-2">
+      <div v-if="projectsData.projects" class="resume-main-container-2 resume-projects">
         <h3 id="project-title">
           {{
             projectsData.projects_title ? projectsData.projects_title : "Projects"
@@ -134,7 +134,7 @@
       </div>
       <!-- Projects -->
       <!-- Experience -->
-      <div v-if="experiencesData.experiences" class="resume-main-container-2">
+      <div v-if="experiencesData.experiences" class="resume-main-container-2 resume-exps">
         <h3 id="experience-title">
           {{
             experiencesData.experiences_title
@@ -147,6 +147,7 @@
           :key="index"
           :data="experience"
           :index="index"
+          class="experience-card"
         >
           <div slot="header" style="text-align:center;">
             <el-link :href="experience.link">
@@ -164,7 +165,7 @@
       </div>
       <!-- Experience -->
       <!-- Education -->
-      <div v-if="educationsData.educations" class="resume-main-container-2">
+      <div v-if="educationsData.educations" class="resume-main-container-2 resume-edus">
         <h3 id="education-title">
           {{
             educationsData.educations_title
@@ -195,7 +196,7 @@
       </div>
       <!-- Education -->
       <!-- Hobbies -->
-      <div v-if="hobbies.hobbies_content" class="resume-main-container-2">
+      <div v-if="hobbies.hobbies_content" class="resume-main-container-2 resume-hobbies">
         <h3 id="hobbies-title">
           {{
             hobbies.hobbies_title

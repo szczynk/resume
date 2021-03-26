@@ -149,6 +149,10 @@ li {
 //Element.io components
 .el-timeline-item__timestamp {
   font-size: 14px;
+  color: #BFC0C5;
+  @media print {
+    color: #000000;
+  }
 }
 
 .el-card {
@@ -167,6 +171,9 @@ li {
 
 .el-link.el-link--default {
   color: #BADDF3;
+  @media print {
+    color: #000000;
+  }
 }
 
 .el-link.el-link--default:hover {
@@ -251,9 +258,22 @@ ul.icons a {
   width: 100px;
   line-height: 100px;
   @media screen and (max-width: 420px) {
+    margin: 0.75rem;
     height: 80px;
     width: 80px;
     line-height: 80px;
+  }
+  @media screen and (max-width: 320px) {
+    margin: 0.1rem;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+  }
+  @media screen and (max-width: 280px) {
+    margin: 0;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
   }
 }
 
@@ -311,6 +331,10 @@ ul.icons a {
   }
 }
 
-.el-timeline-item__timestamp {
-  color: #BFC0C5 !important;
+.resume-exps ul {
+  padding-left: 27px;
+}
+
+.resume-edus .el-timeline {
+  padding-left: 10px;
 }

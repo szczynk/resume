@@ -86,7 +86,7 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://szczynk.github.io/resume'
+    hostname: 'https://szczynk.github.io/'
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
