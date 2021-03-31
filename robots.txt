@@ -1,2 +1,8 @@
+# robots.txt file for szczynk.github.io/resume/
+# Created in the distant future (the year 2021) after
+# the pandemic started.
+
 User-agent: *
-Disallow: 
+Disallow:
+
+Sitemap: https://szczynk.github.io/resume/sitemap.xml
