@@ -22,8 +22,9 @@
                     target="_blank"
                     rel="noreferrer"
                     :href="'https://www.github.com/' + header.github_username"
+                    :title="'https://www.github.com/' + header.github_username"
                   >
-                    <i><FaIcon :icon="['fab','github']" title="Github link" /></i>
+                    <FaIcon :icon="['fab','github']" title="Github link" />
                   </a>
                 </li>
                 <li v-if="header.linkedin_username" id="icons-linkedin">
@@ -33,8 +34,11 @@
                     :href="
                       'https://www.linkedin.com/in/' + header.linkedin_username
                     "
+                    :title="
+                      'https://www.linkedin.com/in/' + header.linkedin_username
+                    "
                   >
-                    <i><FaIcon :icon="['fab','linkedin']" title="Linkedin link" /></i>
+                    <FaIcon :icon="['fab','linkedin']" title="Linkedin link" />
                   </a>
                 </li>
                 <li v-if="header.twitter_username" id="icons-twitter">
@@ -42,8 +46,9 @@
                     target="_blank"
                     rel="noreferrer"
                     :href="'https://twitter.com/' + header.twitter_username"
+                    :title="'https://twitter.com/' + header.twitter_username"
                   >
-                    <i><FaIcon :icon="['fab','twitter']" title="Twitter link" /></i>
+                    <FaIcon :icon="['fab','twitter']" title="Twitter link" />
                   </a>
                 </li>
                 <li v-if="header.email" id="icons-email">
@@ -51,8 +56,9 @@
                     target="_blank"
                     rel="noreferrer"
                     :href="'mailto:' + header.email"
+                    :title="'mailto:' + header.email"
                   >
-                    <i><FaIcon icon="at" title="Email link" /></i>
+                    <FaIcon icon="at" title="Email link" />
                   </a>
                 </li>
                 <li v-if="header.phone" id="icons-phone">
@@ -60,8 +66,9 @@
                     target="_blank"
                     rel="noreferrer"
                     :href="'tel:' + header.phone"
+                    :title="'tel:' + header.phone"
                   >
-                    <i><FaIcon icon="phone-alt" title="Phone link" /></i>
+                    <FaIcon icon="phone-alt" title="Phone link" />
                   </a>
                 </li>
                 <li v-if="header.skype_username" id="icons-skype">
@@ -69,8 +76,9 @@
                     target="_blank"
                     rel="noreferrer"
                     :href="'skype:' + header.skype_username + '?userinfo'"
+                    :title="'skype:' + header.skype_username + '?userinfo'"
                   >
-                    <i><FaIcon :icon="['fab','skype']" title="Skype link" /></i>
+                    <FaIcon :icon="['fab','skype']" title="Skype link" />
                   </a>
                 </li>
               </ul>
@@ -80,9 +88,16 @@
       </div>
       <!-- Header -->
       <!-- About -->
-      <div v-if="about.about_content" class="resume-main-container-2 resume-about">
+      <div
+        v-if="about.about_content"
+        class="resume-main-container-2 resume-about"
+      >
         <h3 id="about-title">
-          {{ about.about_title ? about.about_title : "About Me" }}
+          {{
+            about.about_title
+              ? about.about_title
+              : "About Me"
+          }}
         </h3>
         <el-row v-if="about.about_profile_image">
           <el-col :span="6" :xs="8">
@@ -110,10 +125,15 @@
       </div>
       <!-- About -->
       <!-- Projects -->
-      <div v-if="projectsData.projects" class="resume-main-container-2 resume-projects">
+      <div
+        v-if="projectsData.projects"
+        class="resume-main-container-2 resume-projects"
+      >
         <h3 id="project-title">
           {{
-            projectsData.projects_title ? projectsData.projects_title : "Projects"
+            projectsData.projects_title
+              ? projectsData.projects_title
+              : "Projects"
           }}
         </h3>
         <el-card
@@ -123,8 +143,8 @@
           :index="index"
         >
           <div slot="header" style="text-align: center;">
-            <el-link :href="project.link">
-              <i><FaIcon :icon="['fab','github']" /></i>
+            <el-link :href="project.link" :title="project.link">
+              <FaIcon :icon="['fab','github']" />
               {{ project.name }}
             </el-link>
           </div>
@@ -134,7 +154,10 @@
       </div>
       <!-- Projects -->
       <!-- Experience -->
-      <div v-if="experiencesData.experiences" class="resume-main-container-2 resume-exps">
+      <div
+        v-if="experiencesData.experiences"
+        class="resume-main-container-2 resume-exps"
+      >
         <h3 id="experience-title">
           {{
             experiencesData.experiences_title
@@ -150,12 +173,12 @@
           class="experience-card"
         >
           <div slot="header" style="text-align:center;">
-            <el-link :href="experience.link">
-              <i><FaIcon :icon="['far','building']" /></i>
+            <el-link :href="experience.link" :title="experience.link">
+              <FaIcon :icon="['far','building']" />
               {{ experience.company }}
             </el-link>
             <el-divider direction="vertical" />
-            <i><FaIcon icon="map-marker-alt" /></i> {{ experience.place }}
+            <FaIcon icon="map-marker-alt" /> {{ experience.place }}
             <p>{{ experience.dates }}</p>
             <p>{{ experience.job_title }}</p>
           </div>
@@ -165,7 +188,10 @@
       </div>
       <!-- Experience -->
       <!-- Education -->
-      <div v-if="educationsData.educations" class="resume-main-container-2 resume-edus">
+      <div
+        v-if="educationsData.educations"
+        class="resume-main-container-2 resume-edus"
+      >
         <h3 id="education-title">
           {{
             educationsData.educations_title
@@ -185,7 +211,7 @@
                 {{ education.name }}
                 <el-divider direction="vertical" />
                 <span>
-                  <i><FaIcon icon="map-marker-alt" /></i>
+                  <FaIcon icon="map-marker-alt" />
                   {{ education.place }}
                 </span>
               </h4>
@@ -196,7 +222,10 @@
       </div>
       <!-- Education -->
       <!-- Hobbies -->
-      <div v-if="hobbies.hobbies_content" class="resume-main-container-2 resume-hobbies">
+      <div
+        v-if="hobbies.hobbies_content"
+        class="resume-main-container-2 resume-hobbies"
+      >
         <h3 id="hobbies-title">
           {{
             hobbies.hobbies_title
@@ -270,6 +299,33 @@ export default {
       educationsData,
       hobbies
     }
+  },
+  head () {
+    const head = {
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            '@context': 'https://schema.org/',
+            '@type': 'WebSite',
+            name: 'Szczynk Resume',
+            headline: 'Szczynk Resume',
+            description: 'Szczynk Resume',
+            url: 'szczynk.github.io/resume/'
+          }
+        }
+      ],
+      meta: [
+        {
+          hid: 'github-repo',
+          name: 'github-repo',
+          property: 'github-repo',
+          content: 'szczynk/resume'
+        }
+      ]
+    }
+
+    return head
   },
   methods: {
     print () {

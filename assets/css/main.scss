@@ -35,6 +35,9 @@ mark {
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
+  @media print {
+    background-color: #FFFFFF;
+  }
 }
 
 .resume-main-container-2 {
@@ -47,9 +50,13 @@ mark {
   margin-top:20px;
   margin-left: 5px;
   margin-right: 5px;
-    @media print {
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  @media print {
+    color: #000000;
+    background-color: #FFFFFF;
     break-inside: avoid-page;
-    }
+    widows: 1;
+  }
 }
 
 .popup {
@@ -155,6 +162,12 @@ li {
   }
 }
 
+.el-timeline-item__node{
+  @media print {
+    background-color: #000000;
+  }
+}
+
 .el-card {
   border: 1px;
   background-color: #424242;
@@ -186,7 +199,10 @@ ul.icons a:hover {
 
 ul.icons li {
   display: inline-block;
-  padding-left: 0.75em;
+  padding: 0.5em;
+  @media print {
+    padding: 0;
+  }
 }
 
 ul.icons a {
@@ -209,23 +225,25 @@ ul.icons a {
   }
 }
 
-.icons i {
+.icons svg {
   font-size: 30px;
   line-height: 60px;
   @media print {
     font-size: 15px;
     line-height: 5px;
+    width: 1em !important;
   }
 }
 
 .icons {
-  padding: 0;
   font-size: 1em;
+  padding-top: 10px;
   padding-left: 3cm;
   margin-bottom:20px;
   text-align: center;
 
   @media print {
+    padding-top: 0;
     padding-left: 2cm;
     margin-bottom:5px;
     text-align: left;
@@ -234,10 +252,15 @@ ul.icons a {
         text-decoration: none;
     }
   }
-
   @media screen and (max-width: 768px) {
-      padding-left: 0cm;
-      margin-right:50px;
+    padding-left: 0cm;
+    margin-right: 50px;
+  }
+  @media screen and (max-width: 420px) {
+    margin-right: 35px;
+  }
+  @media screen and (max-width: 320px) {
+    margin-right: 0;
   }
 }
 
@@ -257,6 +280,7 @@ ul.icons a {
   height: 100px;
   width: 100px;
   line-height: 100px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
   @media screen and (max-width: 420px) {
     margin: 0.75rem;
     height: 80px;
@@ -283,7 +307,7 @@ ul.icons a {
   }
   a:link:after, a:visited:after, a:-webkit-any-link {
     content: " (" attr(href) ") ";
-    font-size: 90%;
+    font-size: 95%;
     text-decoration: none;
   }
   @page { margin: 0.5cm }
@@ -310,7 +334,11 @@ ul.icons a {
   left: auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  background: #165C8D
+  background: #165C8D;
+  @media screen and (max-width: 320px) {
+    width: 150px;
+    top: 7px;
+  }
 }
 
 .corner-ribbon.sticky{

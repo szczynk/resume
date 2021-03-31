@@ -73,7 +73,14 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
-      theme_color: '#212121'
+      theme_color: '#212121',
+      ogSiteName: 'szczynk.github.io/resume/',
+      ogTitle: 'Szczynk Resume',
+      ogHost: 'szczynk.github.io',
+      ogUrl: 'szczynk.github.io/resume/',
+      twitterCard: 'summary',
+      twitterSite: '@szczynk',
+      twitterCreator: '@szczynk'
     },
     manifest: {
       lang: 'en'
@@ -82,7 +89,6 @@ export default {
 
   // for robots.txt https://github.com/nuxt-community/robots-module
   robots: {
-    UserAgent: '*'
   },
 
   sitemap: {
