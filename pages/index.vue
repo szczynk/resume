@@ -107,7 +107,7 @@
                 shape="circle"
                 fit="fill"
                 :src="about.about_profile_image"
-                :alt="'about_profile_image ' + about.about_profile_image"
+                :alt="'Szczynk Resume' + about.about_profile_image"
               />
             </p>
           </el-col>
@@ -311,7 +311,7 @@ export default {
             name: 'Szczynk Resume',
             headline: 'Szczynk Resume',
             description: 'Szczynk Resume',
-            url: 'szczynk.github.io/resume/'
+            url: 'https://szczynk.github.io/resume/'
           }
         }
       ],
@@ -321,6 +321,56 @@ export default {
           name: 'github-repo',
           property: 'github-repo',
           content: 'szczynk/resume'
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          property: 'twitter:url',
+          content: 'https://szczynk.github.io/resume/'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          property: 'twitter:title',
+          content: 'Szczynk Resume'
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          property: 'twitter:description',
+          content: 'Szczynk Resume'
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          property: 'twitter:image',
+          content: 'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png'
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:image:secure_url',
+          name: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: 'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png'
+        },
+        {
+          hid: 'og:image:alt',
+          name: 'og:image:alt',
+          property: 'og:image:alt',
+          content: 'Szczynk Resume'
+        }
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          property: 'canonical',
+          href: 'https://szczynk.github.io/resume/'
         }
       ]
     }

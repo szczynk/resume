@@ -1,7 +1,21 @@
+import hooks from './hooks'
+const config = {
+  router: {
+    base: '/resume'
+  }
+}
+
 export default {
   target: 'static',
   router: {
     base: '/resume/'
+  },
+  hooks: hooks(config),
+  render: {
+    static: {
+      prefix: true,
+      maxAge: 1000 * 60 * 60 * 24 * 7
+    }
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -50,8 +64,6 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    // https://github.com/nuxt-community/robots-module
-    '@nuxtjs/robots',
     // https://sitemap.nuxtjs.org/usage/sitemap-options
     '@nuxtjs/sitemap',
     'vue-github-buttons/nuxt'
@@ -76,19 +88,24 @@ export default {
       theme_color: '#212121',
       ogSiteName: 'szczynk.github.io/resume/',
       ogTitle: 'Szczynk Resume',
-      ogHost: 'szczynk.github.io',
-      ogUrl: 'szczynk.github.io/resume/',
+      ogHost: 'https://szczynk.github.io',
+      ogUrl: 'https://szczynk.github.io/resume/',
+      ogImage: {
+        path: 'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png',
+        width: 120,
+        height: 120,
+        type: 'image/png'
+      },
       twitterCard: 'summary',
       twitterSite: '@szczynk',
       twitterCreator: '@szczynk'
     },
     manifest: {
+      name: 'Szczynk Resume',
+      short_name: 'Szczynk Resume',
+      background_color: '#000000',
       lang: 'en'
     }
-  },
-
-  // for robots.txt https://github.com/nuxt-community/robots-module
-  robots: {
   },
 
   sitemap: {
@@ -97,6 +114,9 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
+
+  cache: true,
+  sourceMap: true,
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
