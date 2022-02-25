@@ -39,7 +39,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.7.0",
     "node-sass": "4.14.1",
-    "nuxt-compress": "^4.1.0",
+    "nuxt-compress": "^5.0.0",
     "push-dir": "^0.4.1",
     "sass-loader": "10.1.1"
   }
