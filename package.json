@@ -41,6 +41,6 @@
     "node-sass": "4.14.1",
     "nuxt-compress": "^4.1.0",
     "push-dir": "^0.4.1",
-    "sass-loader": "10.1.1"
+    "sass-loader": "12.6.0"
   }
 }
