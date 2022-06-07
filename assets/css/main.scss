@@ -177,17 +177,24 @@ li {
   color: #FFFFFF;
   transition: .3s;
   margin-bottom: 10px;
+
   .el-card__header {
     @media print {
       padding: 15px 20px;
       border-bottom: 1px solid #d8d8d8;
     }
   }
+
   .el-card__body {
     @media print {
       padding: 15px 20px;
     }
   }
+
+  svg {
+    height: 14px;
+  }
+
   @media print {
     color: #000000;
     background-color: #FFFFFF;
@@ -233,6 +240,11 @@ ul.icons a {
   box-shadow: none;
   padding:0;
   border-radius: 100%;
+
+  svg {
+    height: 30px;
+  }
+
   @media print {
     display: initial;
     line-height: 5px;
