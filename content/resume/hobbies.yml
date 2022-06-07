@@ -1,6 +1,8 @@
 # Hobbies Section
 # hobbies_title: Activities and interests #(Use this to override)
 hobbies_content: > # this will include new lines to allow paragraphs
+  Coffee,
+  Watches,
   Gaming,
   Cycling, and
   High Tech actualities (IOT, CTF etc.)

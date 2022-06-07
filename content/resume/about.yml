@@ -2,7 +2,5 @@
 # about_title: About Me (Use this to override)
 about_profile_image: https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png
 about_content: > # this will include new lines to allow paragraphs
-  Hi, my name’s Bagus, I'm 23 and I live in West Jakarta (Jakarta).
-  I'm not graduate yet but here i am writing some code.
-  Curious by nature and self-taught, I like to follow the new technologies news.
-  Continuous learning is an indispensable thing for me, both professionally and personally.
+  Hi, I'm Szczynk also called as Bagus, a final year student of physics degree specialized in material computational physics from State University of Jakarta. Currently working on undergraduate thesis about the effect of external electric field on electrical and magnetic properties of NiBr2 monolayer based density functional theory (DFT).
+  <br>Wish me pass and publish this year. Interested on WebDev and DevOps. Check my blog at <a href="https://szczynk.github.io/blog/">https://szczynk.github.io/blog/</a>

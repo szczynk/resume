@@ -29,29 +29,20 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    'element-ui/lib/theme-chalk/index.css',
-    '@/assets/css/main.scss'
-  ],
+  css: ['element-ui/lib/theme-chalk/index.css', '@/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '@/plugins/element-ui'
-  ],
+  plugins: ['@/plugins/element-ui'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://github.com/robcresswell/nuxt-compress
-    ['nuxt-compress', { gzip: { cache: true }, brotli: { threshold: 10240 } }],
     // https://github.com/nuxt-community/fontawesome-module
     '@nuxtjs/fontawesome',
     // https://go.nuxtjs.dev/eslint
@@ -66,6 +57,8 @@ export default {
     '@nuxt/content',
     // https://sitemap.nuxtjs.org/usage/sitemap-options
     '@nuxtjs/sitemap',
+    // https://github.com/frenchrabbit/nuxt-precompress
+    'nuxt-precompress',
     'vue-github-buttons/nuxt'
   ],
 
@@ -91,7 +84,8 @@ export default {
       ogHost: 'https://szczynk.github.io',
       ogUrl: 'https://szczynk.github.io/resume/',
       ogImage: {
-        path: 'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png',
+        path:
+          'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png',
         width: 120,
         height: 120,
         type: 'image/png'
@@ -110,6 +104,27 @@ export default {
 
   sitemap: {
     hostname: 'https://szczynk.github.io/'
+  },
+
+  // Default options of nuxt-precompress, override if needed
+  nuxtPrecompress: {
+    enabled: true, // Enable in production
+    report: true, // set true to turn one console messages during module init
+    test: /\.(js|css|html|txt|xml|svg)$/, // files to compress on build
+    // Serving options
+    middleware: {
+      // You can disable middleware if you serve static files using nginx...
+      enabled: false
+    },
+    // build time compression settings
+    gzip: {
+      // should compress to gzip?
+      enabled: true
+    },
+    brotli: {
+      // should compress to brotli?
+      enabled: true
+    }
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

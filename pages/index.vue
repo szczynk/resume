@@ -24,7 +24,7 @@
                     :href="'https://www.github.com/' + header.github_username"
                     :title="'https://www.github.com/' + header.github_username"
                   >
-                    <FaIcon :icon="['fab','github']" title="Github link" />
+                    <FaIcon :icon="['fab', 'github']" title="Github link" />
                   </a>
                 </li>
                 <li v-if="header.linkedin_username" id="icons-linkedin">
@@ -38,7 +38,7 @@
                       'https://www.linkedin.com/in/' + header.linkedin_username
                     "
                   >
-                    <FaIcon :icon="['fab','linkedin']" title="Linkedin link" />
+                    <FaIcon :icon="['fab', 'linkedin']" title="Linkedin link" />
                   </a>
                 </li>
                 <li v-if="header.twitter_username" id="icons-twitter">
@@ -48,7 +48,7 @@
                     :href="'https://twitter.com/' + header.twitter_username"
                     :title="'https://twitter.com/' + header.twitter_username"
                   >
-                    <FaIcon :icon="['fab','twitter']" title="Twitter link" />
+                    <FaIcon :icon="['fab', 'twitter']" title="Twitter link" />
                   </a>
                 </li>
                 <li v-if="header.email" id="icons-email">
@@ -78,7 +78,7 @@
                     :href="'skype:' + header.skype_username + '?userinfo'"
                     :title="'skype:' + header.skype_username + '?userinfo'"
                   >
-                    <FaIcon :icon="['fab','skype']" title="Skype link" />
+                    <FaIcon :icon="['fab', 'skype']" title="Skype link" />
                   </a>
                 </li>
               </ul>
@@ -93,11 +93,7 @@
         class="resume-main-container-2 resume-about"
       >
         <h3 id="about-title">
-          {{
-            about.about_title
-              ? about.about_title
-              : "About Me"
-          }}
+          {{ about.about_title ? about.about_title : "About Me" }}
         </h3>
         <el-row v-if="about.about_profile_image">
           <el-col :span="6" :xs="8">
@@ -142,14 +138,14 @@
           :data="project"
           :index="index"
         >
-          <div slot="header" style="text-align: center;">
+          <div slot="header" style="text-align: center">
             <el-link :href="project.link" :title="project.link">
-              <FaIcon :icon="['fab','github']" />
+              <FaIcon :icon="['fab', 'github']" />
               {{ project.name }}
             </el-link>
           </div>
           <!-- eslint-disable-next-line -->
-      <div v-html="project.description" />
+          <div v-html="project.description" />
         </el-card>
       </div>
       <!-- Projects -->
@@ -172,15 +168,17 @@
           :index="index"
           class="experience-card"
         >
-          <div slot="header" style="text-align:center;">
-            <el-link :href="experience.link" :title="experience.link">
-              <FaIcon :icon="['far','building']" />
+          <div slot="header" style="text-align: center">
+            <el-link :href="experience.work_link" :title="experience.work_link">
+              {{ experience.job_title }}
+            </el-link>
+            <p>{{ experience.dates }}</p>
+            <el-link :href="experience.company_link" :title="experience.company_link">
+              <FaIcon :icon="['far', 'building']" />
               {{ experience.company }}
             </el-link>
             <el-divider direction="vertical" />
             <FaIcon icon="map-marker-alt" /> {{ experience.place }}
-            <p>{{ experience.dates }}</p>
-            <p>{{ experience.job_title }}</p>
           </div>
           <!-- eslint-disable-next-line -->
           <div v-html="experience.description" />
@@ -239,10 +237,7 @@
       </div>
       <!-- Hobbies -->
     </el-main>
-    <div
-      class="corner-ribbon top-right sticky no-print"
-      @click="print()"
-    >
+    <div class="corner-ribbon top-right sticky no-print" @click="print()">
       Print me
     </div>
     <el-footer>
@@ -344,7 +339,8 @@ export default {
           hid: 'twitter:image',
           name: 'twitter:image',
           property: 'twitter:image',
-          content: 'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png'
+          content:
+            'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png'
         },
         {
           hid: 'og:type',
@@ -356,7 +352,8 @@ export default {
           hid: 'og:image:secure_url',
           name: 'og:image:secure_url',
           property: 'og:image:secure_url',
-          content: 'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png'
+          content:
+            'https://szczynk.github.io/resume/_nuxt/icons/icon_120x120.2cde48.png'
         },
         {
           hid: 'og:image:alt',
