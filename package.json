@@ -42,6 +42,6 @@
     "eslint-plugin-vue": "^7.7.0",
     "node-sass": "4.14.1",
     "push-dir": "^0.4.1",
-    "sass-loader": "10.2.1"
+    "sass-loader": "13.0.0"
   }
 }
