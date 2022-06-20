@@ -33,7 +33,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/vue-fontawesome": "^2.0.6",
+    "@fortawesome/vue-fontawesome": "^2.0.8",
     "@nuxtjs/eslint-config": "^10.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/fontawesome": "^1.1.2",
