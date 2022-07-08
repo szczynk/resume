@@ -23,7 +23,7 @@
     "element-ui": "^2.15.9",
     "nuxt": "^2.15.8",
     "nuxt-precompress": "^0.5.9",
-    "snyk": "^1.509.0",
+    "snyk": "^1.965.0",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
